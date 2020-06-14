@@ -59,24 +59,6 @@
 	));
 
 /* Basic */
-.publication-flexcontainer {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 0.5em;
-}
-.publication-flexbox-image {
-// flex-grow: 1;
-}
-.publication-flexbox-text {
-// padding-left: 1em;
-// flex-grow: 1;
-}
-.publication-image {
-width: 3em;
-// max-height: 100%;
-}
 
 	body {
 		background: #fff;
@@ -669,7 +651,7 @@ width: 3em;
 	#main {
 		margin-left: 375px;
 		> section {
-			text-align: left;
+			text-align: center;
 		}
 		> article {
 			text-align: left;

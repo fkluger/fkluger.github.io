@@ -1,0 +1,30 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#main {
+  > section {
+    text-align: left;
+  }
+}
+
+
+.publication-flexcontainer {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0.5em;
+}
+.publication-flexbox-image {
+// flex-grow: 1;
+}
+.publication-flexbox-text {
+// padding-left: 1em;
+// flex-grow: 1;
+}
+.publication-image {
+width: 3em;
+// max-height: 100%;
+}

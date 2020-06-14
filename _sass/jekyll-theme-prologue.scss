@@ -3,6 +3,7 @@
 @import 'libs/mixins';
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+@import url("https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css");
 
 /*
 	Prologue by HTML5 UP
@@ -58,6 +59,24 @@
 	));
 
 /* Basic */
+.publication-flexcontainer {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0.5em;
+}
+.publication-flexbox-image {
+// flex-grow: 1;
+}
+.publication-flexbox-text {
+// padding-left: 1em;
+// flex-grow: 1;
+}
+.publication-image {
+width: 3em;
+// max-height: 100%;
+}
 
 	body {
 		background: #fff;
@@ -103,6 +122,11 @@
 
 	h3 {
 		font-size: 1.5em;
+	}
+
+	h4 {
+		font-size: 0.8em;
+		font-weight: bold;
 	}
 
 	header {
@@ -242,7 +266,7 @@
 
 		img {
 			display: block;
-			width: 100%;
+			max-width: 100%;
 		}
 
 		&.avatar48 {
@@ -445,6 +469,7 @@
 
 		&:active {
 			background-color: #7eaeac;
+				// background-color: #ffffff;
 		}
 	}
 
@@ -600,7 +625,8 @@
 						color: #fff;
 
 						span::before {
-							color: #32bdc9;
+							// color: #32bdc9;
+								color: #ffffff;
 						}
 					}
 				}
@@ -643,7 +669,7 @@
 	#main {
 		margin-left: 375px;
 		> section {
-			text-align: center;
+			text-align: left;
 		}
 		> article {
 			text-align: left;

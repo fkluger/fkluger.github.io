@@ -1,0 +1,20 @@
+---
+title: News
+icon: fa-newspaper
+order: 2
+---
+<ul>
+  {% for post in site.posts %}
+  {% if post.categories contains 'news' %}
+    <!-- <li> -->
+
+    <li>
+      {{- post.date | date_to_long_string -}}
+      <h3>{{ post.title }}</h3>
+      {{ post.content }}
+    </li>
+
+    <!-- </li> -->
+  {% endif %}
+  {% endfor %}
+</ul>

@@ -9,18 +9,18 @@ order: 3
     <!-- <li> -->
     <div class="publication-flexcontainer">
 
-    <!-- {% if post.thumbnail  %} -->
-    <!-- <div class="publication-flexbox-image"> -->
-      <!-- <img src="{{post.thumbnail}}" alt="{{ post.title }}"  class="publication-image"/> -->
-      <!-- text -->
-    <!-- </div> -->
-    <!-- {% endif %} -->
+    {% if post.thumbnail  %}
+    <div class="publication-flexbox-image">
+      <img src="{{post.thumbnail}}" alt="{{ post.title }}"  class="publication-image"/>
+    </div>
+    {% endif %}
 
     <div class="publication-flexbox-text">
       <h3>{{ post.title }}</h3>
       <h4>{{post.authors}}</h4>
       <h4>{{post.conference}}</h4>
       <h4><a href="{{post.paper}}"> Paper</a>{% if post.code %}, <a href="{{post.code}}"> Code </a> {% endif %}</h4>
+      <p class="publication-excerpt">{{- post.excerpt | strip_html | truncatewords: 100 -}}</p>
     </div>
 
     </div>

@@ -1,0 +1,33 @@
+---
+title: Datasets
+icon: fa-database
+order: 3
+---
+<!-- <ul> -->
+  {% for post in site.posts %}
+  {% if post.categories contains 'dataset' %}
+    <!-- <li> -->
+    <div class="publication-flexcontainer">
+
+    {% if post.thumbnail  %}
+    <div class="publication-flexbox-image">
+      <img src="{{post.thumbnail}}" alt="{{ post.title }}"  class="publication-image"/>
+    </div>
+    {% endif %}
+
+    <div class="publication-flexbox-text">
+      <h3>{{ post.title }}</h3>
+      <h4>{{post.conference}}</h4>
+      <h4><a href="{{post.paper}}"> Paper</a>
+        {% if post.code %}, <a href="{{post.code}}"> Code </a> {% endif %}
+      {% if post.poster %}, <a href="{{post.poster}}"> Poster </a> {% endif %}
+    {% if post.video %}, <a href="{{post.video}}"> Video </a> {% endif %}</h4>
+      <p class="publication-excerpt">{{- post.excerpt | strip_html | truncatewords: 100 -}}</p>
+    </div>
+
+    </div>
+    <!-- </li> -->
+  {% endif %}
+  {% endfor %}
+<!-- </ul> -->
+
